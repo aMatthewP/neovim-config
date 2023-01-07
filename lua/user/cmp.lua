@@ -111,12 +111,12 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lua", max_item_count = 12 },
-	{ name = "nvim_lsp", max_item_count = 12 },
-    { name = "luasnip", max_item_count = 12 },
-    { name = "buffer", max_item_count = 12 },
-    { name = "path", max_item_count = 12 },
-	{ name = 'nvim_lsp_signature_help' }
+    { name = "nvim_lua", max_item_count = 12, priority = 5 },
+	{ name = "nvim_lsp", max_item_count = 12, priority = 6 },
+    { name = "luasnip", max_item_count = 12, priority = 4 },
+    { name = "buffer", max_item_count = 12, priority = 1 },
+    { name = "path", max_item_count = 12, priority = 2 },
+	{ name = 'nvim_lsp_signature_help', priority = 3 }
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
