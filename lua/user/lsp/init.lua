@@ -8,10 +8,16 @@ if not status_ok then
 	return
 end
 
-config.sumneko_lua.setup(require("user.lsp.settings.sumneko_lua"))
+config.lua_ls.setup(require("user.lsp.settings.sumneko_lua"))
 config.clangd.setup(require("user.lsp.settings.clangd"))
 config.html.setup(require("user.lsp.settings.html"))
-config.pyright.setup()
 config.cmake.setup(require("user.lsp.settings.cmake"))
+config.pyright.setup(require("user.lsp.settings.pyright"))
+config.pylint.setup{}
 config.tsserver.setup{}
-
+config.rust_analyzer.setup {
+  -- Server-specific settings. See `:help lspconfig-setup`
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+}

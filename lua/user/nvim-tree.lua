@@ -193,6 +193,18 @@ nvim_tree.setup {
 			git = true,
 		  },
 		  glyphs = {
+			default = "",
+			symlink = "",
+			folder = {
+				arrow_open = icons.ui.ArrowOpen,
+				arrow_closed = icons.ui.ArrowClosed,
+				default = "",
+				open = "",
+				empty = "",
+				empty_open = "",
+				symlink = "",
+				symlink_open = "",
+			},
 			git = {
 			  unstaged = "",
 			  staged = "S",

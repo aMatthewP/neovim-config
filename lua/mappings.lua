@@ -25,8 +25,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- keymap("n", "<leader><Shift><Tab>", ":blast<CR>", opts)
 keymap("n", "gT", ":bprevious<CR>", opts)
 keymap("n", "gt", ":bnext<CR>", opts)
-keymap("n", "<A-h>", ":bprevious<CR>", opts)
-keymap("n", "<A-l>", ":bnext<CR>", opts)
+keymap("n", "<leader>j", ":bprevious<CR>", opts)
+keymap("n", "<leader>k", ":bnext<CR>", opts)
 
 --Set comment
 keymap("n", "<C-/>", "gcc", opts)
@@ -45,7 +45,8 @@ keymap('c', '<C-H>', '<C-W>', { noremap = true, silent = false })
 keymap('n', '<C-E>', ':NvimTreeToggle<CR>', opts)
 
 --Set ":Telescope find_files"
-keymap("n", "<C-P>", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>p", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>r", ":Telescope oldfiles<CR>", opts)
 
 --Set ctrl + z
 keymap("i", "<C-Z>", "<C-O>u", opts)
@@ -86,20 +87,27 @@ keymap("i", "<C-v>", "<C-O>p", { noremap = true })
 keymap("n", "<leader>o", ":!live-server lua vim.fn.getcwd()<CR>", opts)
 
 --Dap
-
 keymap("n", "<F5>", ":lua require'dap'.continue()<CR>", opts)
+keymap("n", "<C-F5>", ":lua require'dap'.restart()<CR>", opts)
 keymap("n", "<F3>", ":lua require'dap'.step_over()<CR>", opts)
 keymap("n", "<F2>", ":lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<F10>", ":lua require'dap'.close()<CR>", opts)
 keymap("n", "<F12>", ":lua require'dap'.step_out()<CR>", opts)
+
 keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
 keymap("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
 keymap("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
 keymap("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>", opts)
 keymap("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>", opts)
+keymap("n", "<leader>do", ":lua require'dapui'.open()<CR>", opts)
+keymap("n", "<leader>dc", ":lua require'dapui'.close()<CR>", opts)
 
 keymap("n", "<C-d>", "<C-d>zz", opts);
 keymap("n", "<C-u>", "<C-u>zz", opts);
 
+--Split 
+keymap("n", "<leader>vs", ":vsplit<CR>", opts)
+keymap("n", "<leader>hs", ":split<CR>", opts)
 
 -- neovide settings
 if vim.g.neovide == true then

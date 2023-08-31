@@ -1,4 +1,5 @@
 local status_ok, nvim_web_devicons = pcall(require, "nvim-web-devicons")
+
 if not status_ok then
   return
 end
@@ -10,32 +11,32 @@ nvim_web_devicons.set_icon {
     cterm_color = "61",
     name = "Sy",
   },
-  ["py"] = {
-    icon = "",
-    color = "#519BB7",
-    cterm_color = "59",
-    name = "Py",
+  ["pbd"] = {
+	icon = "",
+	colro = "#f4bc74",
+	cterm_color = "166",
+	name = "Pbd"
   },
   ["exe"] = {
-    icon = "ﬓ",
+    icon = "",
 	-- color = "#DC582A",
 	-- cterm_color = "59",
     color = "#e24329",
     cterm_color = "166",
 	name = "Exe"
   },
-  -- ["js"] = {
-  --   icon = "",
-  --   color = "#cbcb41",
-  --   cterm_color = "185",
-  --   name = "Js",
-  -- },
-  -- ["ts"] = {
-  --   icon = "ﯤ",
-  --   color = "#519aba",
-  --   cterm_color = "67",
-  --   name = "Ts",
-  -- },
+  ["js"] = {
+    icon = "󰌞",
+    color = "#cbcb41",
+    cterm_color = "185",
+    name = "Js",
+  },
+  ["ts"] = {
+    icon = "ﯤ",
+    color = "#519aba",
+    cterm_color = "67",
+    name = "Ts",
+  },
   [".gitattributes"] = {
     icon = "",
     color = "#e24329",
@@ -73,3 +74,10 @@ nvim_web_devicons.set_icon {
     name = "Diff",
   },
 }
+
+  -- ["py"] = {
+  --   icon = "",
+  --   color = "#519BB7",
+  --   cterm_color = "59",
+  --   name = "Py",
+  -- },

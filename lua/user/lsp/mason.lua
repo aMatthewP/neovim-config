@@ -1,13 +1,14 @@
 local servers = {
 	"pyright",
-	"sumneko_lua",
+	"lua_ls",
 	"clangd",
 	"jsonls",
 	"html",
 	"cssls",
 	"tsserver",
 	"cmake",
-	"emmet_ls"
+	"emmet_ls",
+	"rust_analyzer"
 }
 
 local settings = {

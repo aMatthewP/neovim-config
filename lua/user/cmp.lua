@@ -16,32 +16,33 @@ local check_backspace = function()
 end
 
 --   פּ ﯟ   some other good icons
+--
 local kind_icons = {
-  Text = "",
+  Text = "󰉿", -- format_size
   Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
+  Function = "󰊕",-- function
+  Constructor = "", -- Construction
+  Field = "",
+  Variable = "󰆧",
+  Class = "󰌗", -- Lan
   Interface = "",
-  Module = "",
+  Module = "",
   Property = "",
   Unit = "",
-  Value = "",
+  Value = "󰎠",--numeric
   Enum = "",
-  Keyword = "",
+  Keyword = "󰌋",
   Snippet = "",
-  Color = "",
-  File = "",
+  Color = "",
+  File = "",
   Reference = "",
-  Folder = "",
+  Folder = "󰉋",
   EnumMember = "",
-  Constant = "",
+  Constant = "",
   Struct = "",
   Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Operator = "󰆕", --contrast
+  TypeParameter = "󰊄",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 

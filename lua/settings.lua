@@ -33,7 +33,7 @@ vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
 vim.opt.list = true
-vim.opt.listchars:append("tab:→ ,trail:·,extends:◣,precedes:◢,nbsp:○")
+vim.opt.listchars:append("tab:❯ ,trail:·,extends:◣,precedes:◢,nbsp:○")
 
 --Treesitter folding
 vim.o.foldmethod = "expr"
@@ -46,23 +46,23 @@ set.backspace = "indent,eol,start"
 --Clipboard
 set.clipboard:append("unnamedplus")
 
-set.shm = "filnxtToOF"
+-- set.shm = "filnxtToOF"
 
 --Neovide
 if vim.g.neovide then
 	--Font
 	-- set.guifont="FiraCode Nerd Font:h11"
-	-- set.guifont="NotoMono Nerd Font Mono:h11"
-	-- set.guifont="FiraCode Nerd Font:h11"
-	set.guifont="CaskaydiaCove Nerd Font:h11"
+	set.guifont="NotoMono Nerd Font Mono:h12"
+	-- set.guifont="CaskaydiaCove Nerd Font:h11"
+	
 	vim.g.neovide_remember_window_position = true
-	vim.g.neovide_transparency = 0.90
+	-- vim.g.neovide_transparency = 0.90
 	vim.g.neovide_scale_factor = 1.0
 	vim.g.neovide_no_idle = true
-	vim.g.neovide_refresh_rate_idle = 60
-else
-	vim.cmd "highlight Normal ctermbg=none guibg=none"
-	vim.cmd "highlight NonText ctermbg=none guibg=none"
+	-- vim.g.neovide_refresh_rate_idle = 60
+-- else
+-- 	vim.cmd "highlight Normal ctermbg=none guibg=none"
+-- 	vim.cmd "highlight NonText ctermbg=none guibg=none"
 end
 
 vim.opt.undofile = true

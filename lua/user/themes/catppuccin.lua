@@ -4,7 +4,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = not vim.g.neovide and true or false,
+    transparent_background = true,
     term_colors = false,
     dim_inactive = {
         enabled = false,

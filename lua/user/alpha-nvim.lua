@@ -305,14 +305,14 @@ dashboard.section.buttons.val = {
 --set menu
 dashboard.section.buttons.val = {
 	dashboard.button( "n", "  > New file" , ":ene <BAR> startinsert <CR>"),
-	dashboard.button( "f", "  > Find file", ":cd C:\\Dev\\ | Telescope find_files<CR>"),
+	dashboard.button( "f", "󰍉  > Find file", ":cd C:\\Dev\\ | Telescope find_files<CR>"),
 	dashboard.button( "e", "  > File explorer", ":cd C:\\Dev\\ | Telescope file_browser<CR>"),
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
     -- dashboard.button( "s", "  > Settings" , ":cd C:\\Users\\admin\\AppData\\Local\\nvim\\ | :e init.lua | split . | wincmd k | pwd<CR> | <CR> | <C-L>"),
     -- dashboard.button( "s", "  > Settings" , ":cd C:\\Users\\admin\\AppData\\Local\\nvim\\ | :e init.lua | wincmd k | :NvimTreeOpen<CR>"),
     dashboard.button( "s", "  > Settings" , ":e C:\\Users\\admin\\AppData\\Local\\nvim\\lua\\settings.lua | :NvimTreeToggle<CR>"),
     dashboard.button( "p", "  > Recent Proejcts", ":Telescope projects<CR>"),
-    dashboard.button( "q", "  > Quit NVIM", ":qa<CR>"),
+    dashboard.button( "q", "󱞨  > Quit NVIM", ":qa<CR>"),
 }
 
 alpha.setup(dashboard.opts)
@@ -321,7 +321,6 @@ alpha.setup(dashboard.opts)
 vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])
-
 
 
 

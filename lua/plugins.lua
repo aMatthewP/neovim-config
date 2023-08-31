@@ -24,22 +24,19 @@ return require('packer').startup(function(use)
 
   -- My plugins here
 	--start screen nvim 
-	use {
-		"goolord/alpha-nvim",
-	}
+	use "goolord/alpha-nvim"
 
 	--comments
 	use "numToStr/Comment.nvim"
 
 	-- Themes
 	--use { "ellisonleao/gruvbox.nvim" }
-	use "EdenEast/nightfox.nvim"
-	use "sainnhe/gruvbox-material"
+	-- use "EdenEast/nightfox.nvim"
+	-- use "sainnhe/gruvbox-material"
 	-- use "joshdick/onedark.vim"
+	-- use "marko-cerovac/material.nvim"
 	use "navarasu/onedark.nvim"
 	use { "catppuccin/nvim", as = "catppuccin" }
-	use "folke/tokyonight.nvim"
-	-- use "marko-cerovac/material.nvim"
 
 
 	--File explorer
@@ -49,13 +46,14 @@ return require('packer').startup(function(use)
 	}
 	use "nvim-tree/nvim-web-devicons"
 
+
  --  --Telescope
 	use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use { "nvim-telescope/telescope-file-browser.nvim" }
+	use "nvim-telescope/telescope-file-browser.nvim"
 
   --Treesitter
     use {
@@ -106,16 +104,6 @@ return require('packer').startup(function(use)
 	use "neovim/nvim-lspconfig"
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
-	-- use {
-	-- 	"ahmedkhalf/lsp-rooter.nvim",
-	-- 	config = function()
-	-- 	require("lsp-rooter").setup {
-	-- 	  -- your configuration comes here
-	-- 	  -- or leave it empty to use the default settings
-	-- 	  -- refer to the configuration section below
-	-- 	}
-	-- 	end
-	-- }
 
 	--Rooter
 	use {

@@ -1,9 +1,9 @@
 local dap, dapui, dapgo, dapvirtualtext = require("dap"), require("dapui"), require("dap-go"), require("nvim-dap-virtual-text")
+local nvimTree = require("nvim-tree")
 
--- vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl="red", linehl="", numhl="" })
-vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='red', linehl='', numhl=''})
+vim.fn.sign_define("DapBreakpoint", { text="🔴", texthl="red", linehl="", numhl="" })
 
-dap.setup()
+-- dap.setup()
 dapui.setup()
 dapgo.setup()
 dapvirtualtext.setup()
@@ -20,6 +20,7 @@ dap.listeners.before.event_exited["dapui_config"] = function ()
 	dapui.close()
 end
 
-dap.configurations.cpp = require("user.dap.settings.cpp").settings
+local dapcpp = require("user.dap.settings.cpp")
 
-dap.configurations.c = dap.configurations.cpp
+dap.adapters.lldb = dapcpp.adapters.lldb
+dap.configurations.cpp = dapcpp.configs
