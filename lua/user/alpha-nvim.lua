@@ -106,26 +106,26 @@ local headers = {
 		 '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢛⠀⠀⠀⠀⠀⠀⠀⠐⢾⠀⠀⠀⠀⠀⠀⠀⠀⠀',
 	},
 	{
-		 '        .--`````````--.',
-		 '     .`      .---.      `.',
-		 '    /    .-----------.    \\',
-		 '   /        .-----.        \\',
-		 '   |       .-.   .-.       |',
-		 '   |      /   \\ /   \\      |',
-		 '    \\    | .-. | .-. |    /',
-		 '     `-._| | | | | | |_.-`',
-		 '         | `-` | `-` |',
-		 '          \\___/ \\___/',
-		 '       _.-`  /   \\  `-._',
-		 '     .` _.--|     |--._ `.',
-		 '     ` _...-|     |-..._ `',
-		 '            |     |',
-		 '            `.___.`',
-		 '              | |',
-		 '             _| |_',
-		 '            /\\( )/\\',
-		 '           /  ` `  \\',
-		 '          | |     | |',
+'        .--`````````--.',
+'     .`      .---.      `.',
+'    /    .-----------.    \\',
+'   /        .-----.        \\',
+'   |       .-.   .-.       |',
+'   |      /   \\ /   \\      |',
+'    \\    | .-. | .-. |    /',
+'     `-._| | | | | | |_.-`',
+'         | `-` | `-` |',
+'          \\___/ \\___/',
+'       _.-`  /   \\  `-._',
+'     .` _.--|     |--._ `.',
+'     ` _...-|     |-..._ `',
+'            |     |',
+'            `.___.`',
+'              | |',
+'             _| |_',
+'            /\\( )/\\',
+'           /  ` `  \\',
+'          | |     | |',
 	},
 	{
 		"=ccccc,      ,cccc       ccccc      ,cccc,  ?$$$$$$$,  ,ccc,   -ccc        ",
@@ -289,8 +289,9 @@ local nvimHeader = {
     "                                                     ",
 }
 
-math.randomseed(os.clock())
-dashboard.section.header.val = headers[math.random(1, #headers)]
+-- math.randomseed(os.clock())
+-- dashboard.section.header.val = headers[math.random(1, #headers)]
+dashboard.section.header.val = headers[5]
 
 --[[
 dashboard.section.buttons.val = {
@@ -310,7 +311,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "r", "  > Recent"   , ":Telescope oldfiles<CR>"),
     -- dashboard.button( "s", "  > Settings" , ":cd C:\\Users\\admin\\AppData\\Local\\nvim\\ | :e init.lua | split . | wincmd k | pwd<CR> | <CR> | <C-L>"),
     -- dashboard.button( "s", "  > Settings" , ":cd C:\\Users\\admin\\AppData\\Local\\nvim\\ | :e init.lua | wincmd k | :NvimTreeOpen<CR>"),
-    dashboard.button( "s", "  > Settings" , ":e C:\\Users\\admin\\AppData\\Local\\nvim\\lua\\settings.lua | :NvimTreeToggle<CR>"),
+    dashboard.button( "s", "  > Settings" , ":e C:\\Users\\admin\\AppData\\Local\\nvim\\lua\\settings.lua<CR>"),
     dashboard.button( "p", "  > Recent Proejcts", ":Telescope projects<CR>"),
     dashboard.button( "q", "󱞨  > Quit NVIM", ":qa<CR>"),
 }

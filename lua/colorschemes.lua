@@ -15,9 +15,9 @@ vim.g.gruvbox_material_foreground = "mix" --can be "mix", "material", or "origin
 
 -- vim.o.background = "dark"
 -- vim.cmd "colorscheme gruvbox-material"
--- vim.cmd "colorscheme onedark"
+vim.cmd "colorscheme onedark"
 -- vim.cmd "colorscheme nordfox"
-vim.cmd "colorscheme catppuccin-frappe"
+-- vim.cmd "colorscheme catppuccin-frappe"
 -- require("catppuccin").load()
 -- require("onedark").load()
 -- vim.cmd[[colorscheme tokyonight]]

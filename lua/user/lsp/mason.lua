@@ -5,7 +5,7 @@ local servers = {
 	"jsonls",
 	"html",
 	"cssls",
-	"tsserver",
+	"ts_ls",
 	"cmake",
 	"emmet_ls",
 	"rust_analyzer"
@@ -38,6 +38,11 @@ end
 local opts = {}
 
 for _, server in pairs(servers) do
+	if server == "html" then
+		filetypes = {
+			"rust"
+		}
+	end
 	opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,

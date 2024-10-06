@@ -45,6 +45,7 @@ return require('packer').startup(function(use)
       tag = "nightly"
 	}
 	use "nvim-tree/nvim-web-devicons"
+	use 'notjedi/nvim-rooter.lua'
 
 
  --  --Telescope
@@ -55,7 +56,7 @@ return require('packer').startup(function(use)
 
 	use "nvim-telescope/telescope-file-browser.nvim"
 
-  --Treesitter
+  -- --Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
@@ -105,20 +106,13 @@ return require('packer').startup(function(use)
 	use "williamboman/mason.nvim"
 	use "williamboman/mason-lspconfig.nvim"
 
-	--Rooter
-	use {
-		"notjedi/nvim-rooter.lua",
-	}
-
 	--DAP
 	use "mfussenegger/nvim-dap"
 	use "rcarriga/nvim-dap-ui"
 	use "leoluz/nvim-dap-go"
 	use "nvim-telescope/telescope-dap.nvim"
 	use "theHamsta/nvim-dap-virtual-text"
-
-	--Project
-	 use "ahmedkhalf/project.nvim"
+	use "nvim-neotest/nvim-nio"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

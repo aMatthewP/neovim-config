@@ -22,5 +22,6 @@ end
 
 local dapcpp = require("user.dap.settings.cpp")
 
-dap.adapters.lldb = dapcpp.adapters.lldb
+dap.set_log_level('TRACE')
+dap.adapters.cppvsdbg = dapcpp.adapters.cppvsdbg
 dap.configurations.cpp = dapcpp.configs
